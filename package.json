@@ -1,0 +1,19 @@
+{
+  "name": "piff-puff-webhook",
+  "version": "1.0.0",
+  "description": "Sending messages to Discord Webhooks for PIFF & PUFF",
+  "main": "index.js",
+  "scripts": {
+    "start": "node .",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Cactooz",
+  "license": "MIT",
+  "dependencies": {
+    "@jimp/plugin-displace": "^0.16.1",
+    "discord-webhook-node": "^1.1.8",
+    "jimp": "^0.16.1",
+    "yargs": "^17.5.1"
+  }
+}
