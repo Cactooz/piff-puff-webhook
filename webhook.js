@@ -1,5 +1,9 @@
-const { Webhook } = require('discord-webhook-node');
-const webhook = new Webhook("url");
+const { Webhook } = require("discord-webhook-node");
+const dotenv = require("dotenv")
+
+//Get the webhook url from .env file and create a webhook
+dotenv.config();
+const webhook = new Webhook(process.env.WEBHOOK_URL);
 
 //Send just a text message
 function sendText(text) {
