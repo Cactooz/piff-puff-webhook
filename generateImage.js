@@ -1,10 +1,11 @@
 const Jimp = require("jimp");
 
-async function generateImage(inputText, inputLogo, imageSize) {
+async function generateImage(inputText, inputLogo, imageSize, fontSize) {
 	//Defaults if nothing is given
 	inputText = inputText || "";
 	inputLogo = inputLogo || "";
 	imageSize = imageSize || 250;
+	fontSize = fontSize || "medium";
 
 	//Exit early if no text are added
 	if (![...inputText].length) return console.log("\x1b[31mError: \x1b[0mNo text defined to add to image.");
@@ -33,7 +34,7 @@ async function generateImage(inputText, inputLogo, imageSize) {
 	}
 
 	//Fetch font
-	const font = await Jimp.loadFont("./src/font/typewriter_medium.fnt");
+	const font = await Jimp.loadFont(`./src/font/typewriter_${fontSize.toLowerCase()}.fnt`);
 
 	//Coordinates for upper left corner of text
 	const x = 150;

@@ -9,7 +9,7 @@ async function main() {
 	//Check if an image should be sent or just plain text
 	if (args.image) {
 		//Generate image with the text
-		await generate.generateImage(args.text, args.logo, args.size);
+		await generate.generateImage(args.text, args.logo, args.size, args.font);
 		send.sendImage();
 	} else
 		send.sendText(args.text);
